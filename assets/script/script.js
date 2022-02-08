@@ -91,7 +91,7 @@ function searchButtonHandler(event) {
 }
 
 var getGeo = function (city) {
-    var geoRequest = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
+    var geoRequest = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
     fetch(geoRequest).then(function (geoResponse) {
         if (geoResponse.ok) {
             geoResponse.json().then (function (geoData) {

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/materialize.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<!-- header and nav -->
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper blue-grey lighten-2">
+            <h1 class="center">Weather Dashboard</h1>
+            </div>
+        </nav>
+    </header>
+    <!-- main content including left-side location selector with search -->
+    <main class="row main">
+        <!-- left-hand location selection section -->
+        <section class="col s3 cyan lighten-4 main section">
+            <div class="row">
+                <div class="col 12">
+                    <h4 class="search">Search for a City:</h4>
+                </div>
+                <div class="row">
+                    <form id="search-form" class="col s12 l12 no-autoinit">
+                        <div class="input-field col s12">
+                            <label class="form-label" for="searchCity">Search City</label>
+                            <input name="searchCity" id="searchCity" type="text" autofocus="true" class="form-input" />
+                            <button type="submit" class="btn waves-effect waves-light" id="searchBtn">Search</button>
+                        </div>
+                    </form>
+                </div>
+            <div class="row">
+                <ui class="col s10 l0" id="historyContainer">
+
+                </ui>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <!-- right-hand main body -->
+        <section class="col s9 brown lighten-3 main section">
+            <!-- <div class="row"> -->
+                <div class="col s12 m12">
+                    <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="currentCity"></h6>
+                        <h6 id="date"></h6>
+                        <img  id="cIcon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="cTemp"></li>
+                            <li id="cWind"></li>
+                            <li id="cHumid"></li>
+                            <li id="cUIV"></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="row"> -->
+                <h4 class="col s12">5-Day Forecast:</h4>
+                <!-- day 1 -->
+                <div class="card blue-grey darken-1 col s2">                    
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="day1"></h6>
+                        <img  id="f1Icon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="f1Temp"></li>
+                            <li id="f1Wind"></li>
+                            <li id="f1Humid"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- day 2 -->
+                <div class="card blue-grey darken-1 col s2">                    
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="day2"></h6>
+                        <img  id="f2Icon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="f2Temp"></li>
+                            <li id="f2Wind"></li>
+                            <li id="f2Humid"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- day 3  -->
+                <div class="card blue-grey darken-1 col s2">                    
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="day3"></h6>
+                        <img  id="f3Icon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="f3Temp"></li>
+                            <li id="f3Wind"></li>
+                            <li id="f3Humid"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- day 4 -->
+                <div class="card blue-grey darken-1 col s2">                    
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="day4"></h6>
+                        <img  id="f4Icon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="f4Temp"></li>
+                            <li id="f4Wind"></li>
+                            <li id="f4Humid"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- day 5 -->
+                <div class="card blue-grey darken-1 col s2">                    
+                    <div class="card-content white-text">
+                        <h6 class="card-title" id="day5"></h6>
+                        <img  id="f5Icon" src="./assets/images/noIcon.png"/>
+                        <ul id="current">
+                            <li id="f5Temp"></li>
+                            <li id="f5Wind"></li>
+                            <li id="f5Humid"></li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </section>
+    </main>
+
+    <script src="./assets/script/materialize.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>

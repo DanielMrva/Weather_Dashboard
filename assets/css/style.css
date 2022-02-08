@@ -1,0 +1,25 @@
+.main {
+    min-height: 100vh !important;
+}
+
+ul {
+    list-style-type: none !important;
+}
+
+.noStyle {
+    list-style-type: none !important;
+    text-decoration: none !important;
+}
+
+ul li {
+    font-size: smaller;
+}
+
+h6 {
+    font-size: .75rem;
+}
+/* .fullview {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;  
+} */

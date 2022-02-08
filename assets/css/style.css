@@ -18,8 +18,23 @@ ul li {
 h6 {
     font-size: .75rem;
 }
-/* .fullview {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;  
-} */
+
+.uvLow {
+    color: rgb(100, 200, 150)
+}
+
+.uvMod {
+    color:rgb(180, 210, 20)
+}
+
+.uvHigh {
+    color:rgb(250, 150, 10)
+}
+
+.uvVHi {
+    color:rgb(220, 50, 10)
+}
+
+.uvExt {
+    color:rgb(220, 10, 180)
+}

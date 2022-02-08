@@ -182,6 +182,8 @@ function renderStoredHistory() {
             const btnClasses = newBtnClasses[ind5];
             newBtn.classList.add(btnClasses);    
         }
+        newBtn.setAttribute("data-lat", historyItem.lat);
+        newBtn.setAttribute("data-lon", historyItem.lon);
     }
 };
 
@@ -200,6 +202,15 @@ function renderWeather(city) {
     cWind.innerText = `Wind: ${currentObj.wind} MPH`;
     cHumid.innerText = `Humidity: ${currentObj.humidity} %`;
     cUiv.innerText = `UIV: ${currentObj.uvi}`;
+    // if (currentObj.uvi <= 2) {
+    //     cUiv.classList.addClass("uvLow")
+    // } else if (2 < currentObj.uvi <= 5) {
+    //     cUiv.classList.addClass("uvMod")        
+    // } else if (5 < currentObj.uvi <= 7) {
+    //     cUiv.classList.addClass("uvHigh")
+    // } else if (5 < currentObj.uvi <= 7) {
+    //     cUiv.classList.addClass("uvVHi")
+    // } else {cUiv.classList.addClass("uvExt")};
     cIcon.setAttribute("src", `http://openweathermap.org/img/w/${currentObj.icon}.png`)
 };
 
@@ -224,6 +235,8 @@ function renderForecast(city) {
 
 
 M.AutoInit();
+getStoredHistory();
+renderStoredHistory();
 
 //event listeners
 
@@ -233,7 +246,9 @@ ulEl.addEventListener('click', function (e) {
     e.preventDefault()
     if (e.target.classList.contains("hButt")) {
     var city=e.target.innerText;
-    getWeather(lat, lon);
+    var lat=e.target.dataset.lat;
+    var lon=e.target.dataset.lon;
+    getWeather(city, lat, lon);
     // var namedBtn = e.target.parent;
     // clearCards(namedBtn);
     }

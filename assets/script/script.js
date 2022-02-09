@@ -12,7 +12,7 @@ var cCity = document.getElementById("currentCity")
 var cTemp = document.getElementById("cTemp");
 var cWind = document.getElementById("cWind");
 var cHumid = document.getElementById("cHumid");
-var cUiv = document.getElementById("cUIV");
+var cUVI = document.getElementById("cUVI");
 var cIcon = document.getElementById("cIcon");
 var searchBtn = document.getElementById("search-form");
 var ulEl = document.getElementById("historyContainer");
@@ -201,18 +201,23 @@ function renderWeather(city) {
     cTemp.innerText = `Temp: ${currentObj.temp} \xB0`;
     cWind.innerText = `Wind: ${currentObj.wind} MPH`;
     cHumid.innerText = `Humidity: ${currentObj.humidity} %`;
-    cUiv.innerText = `UIV: ${currentObj.uvi}`;
-    // if (currentObj.uvi <= 2) {
-    //     cUiv.classList.addClass("uvLow")
-    // } else if (2 < currentObj.uvi <= 5) {
-    //     cUiv.classList.addClass("uvMod")        
-    // } else if (5 < currentObj.uvi <= 7) {
-    //     cUiv.classList.addClass("uvHigh")
-    // } else if (5 < currentObj.uvi <= 7) {
-    //     cUiv.classList.addClass("uvVHi")
-    // } else {cUiv.classList.addClass("uvExt")};
+    cUVI.innerText = `UVI: ${currentObj.uvi}`;
+    removeUVI();
+    if (currentObj.uvi <= 2) {
+        cUVI.classList.add("uvLow")
+    } else if (2 < currentObj.uvi <= 5) {
+        cUVI.classList.add("uvMod")        
+    } else if (5 < currentObj.uvi <= 7) {
+        cUVI.classList.addC("uvHigh")
+    } else if (5 < currentObj.uvi <= 7) {
+        cUVI.classList.add("uvVHi")
+    } else {cUVI.classList.add("uvExt")};
     cIcon.setAttribute("src", `http://openweathermap.org/img/w/${currentObj.icon}.png`)
 };
+
+function removeUVI() {
+    cUVI.classList.remove("uvLow", "uvMod", "uvHigh", "uvVHi", "uvExt");
+}
 
 function renderForecast(city) {
     for (let ind2 = 0; ind2 < forecastObj.length; ind2++) {

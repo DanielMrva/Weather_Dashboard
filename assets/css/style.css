@@ -20,21 +20,21 @@ h6 {
 }
 
 .uvLow {
-    color: rgb(100, 200, 150)
+    color: rgb(100, 200, 150) !important;
 }
 
 .uvMod {
-    color:rgb(180, 210, 20)
+    color:rgb(180, 210, 20) !important;
 }
 
 .uvHigh {
-    color:rgb(250, 150, 10)
+    color:rgb(250, 150, 10) !important;
 }
 
 .uvVHi {
-    color:rgb(220, 50, 10)
+    color:rgb(220, 50, 10) !important;
 }
 
 .uvExt {
-    color:rgb(220, 10, 180)
+    color:rgb(220, 10, 180) !important;
 }
